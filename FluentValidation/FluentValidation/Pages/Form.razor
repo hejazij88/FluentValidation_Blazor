@@ -1,0 +1,74 @@
+﻿@page "/Form"
+
+@using Model
+@using Model.Validation
+
+
+<MudCard>
+    <MudForm Model="user" @ref="_form" Validation="Validation.ValidateValue" ValidationDelay="0">
+        <MudCardContent>
+            <MudTextField @bind-Value="user.FullName"
+                          For="@(() => user.FullName)"
+                          Immediate="true"
+                          Label="FullName" />
+
+            <MudTextField @bind-Value="user.Phone"
+                          For="@(() => user.Phone)"
+                          Immediate="true"
+                          Label="Phone" />
+
+            <MudTextField @bind-Value="user.Email"
+                          For="@(() => user.Email)"
+                          Immediate="true"
+                          Label="Email" />
+
+            <MudTextField @bind-Value="user.NatinoalCode"
+                          For="@(() => user.NatinoalCode)"
+                          Immediate="true"
+                          Label="NatinoalCode" />
+
+            <MudTextField @bind-Value="user.Address"
+                          For="@(() => user.Address)"
+                          Immediate="true"
+                          Label="Address" />
+        </MudCardContent>
+        <MudCardContent Class="pa-0">
+
+        </MudCardContent>
+    </MudForm>
+    <MudCardActions>
+        <MudButton Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto" OnClick="Save">Save</MudButton>
+    </MudCardActions>
+</MudCard>
+
+@code {
+
+    [Inject] ISnackbar _snackbar { get; set; }
+
+    private User user { get; set; } = new();
+
+    private UserValidation Validation { get; set; } = new();
+
+    private List<User> userList { get; set; } = new();
+
+    private MudForm _form;
+
+
+    private async void Save()
+    {
+        await _form.Validate();
+
+         if(!_form.IsValid)return;
+
+         var id=userList.Count;
+         user.Id = id++;
+         userList.Add(user);
+
+         _snackbar.Add("User Add", Severity.Success);
+
+
+
+    }
+
+
+}

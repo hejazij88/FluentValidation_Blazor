@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentValidation_Blazor", "FluentValidation\FluentValidation_Blazor.csproj", "{3747AB97-83FB-4F81-9415-8238C83E2279}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{78397388-D6A4-4FFB-862F-0887FF6B70D2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3747AB97-83FB-4F81-9415-8238C83E2279}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3747AB97-83FB-4F81-9415-8238C83E2279}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3747AB97-83FB-4F81-9415-8238C83E2279}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3747AB97-83FB-4F81-9415-8238C83E2279}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78397388-D6A4-4FFB-862F-0887FF6B70D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78397388-D6A4-4FFB-862F-0887FF6B70D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78397388-D6A4-4FFB-862F-0887FF6B70D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78397388-D6A4-4FFB-862F-0887FF6B70D2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2703FB81-D727-4455-9C80-1EEE492C824D}
+	EndGlobalSection
+EndGlobal
